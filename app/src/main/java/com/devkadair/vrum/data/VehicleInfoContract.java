@@ -1,6 +1,7 @@
 package com.devkadair.vrum.data;
 
 import android.content.ContentResolver;
+import android.content.ContentUris;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
@@ -54,5 +55,39 @@ public class VehicleInfoContract {
         public static final String COLUMN_WHEEL_BASE = "car_wheel_base";
 
         public static final String COLUMN_CLEARANCE = "car_clearance";
+
+//        Fuel
+        public static final String COLUMN_FUEL_TYPE = "car_fuel_type";
+
+        public static final String COLUMN_FUEL_CAPACITY = "car_fuel_capacity";
+
+        public static final String COLUMN_MILEAGE_HIGHWAY = "car_mileage_highway";
+
+        public static final String COLUMN_MILEAGE_CITY = "car_mileage_city";
+
+        public static final String COLUMN_RANGE_CITY = "car_range_city";
+
+        public static final String COLUMN_RANGE_HIGHWAY = "car_range_highway";
+
+//        Drivetrain
+        public static final String COLUMN_DRIVE_TYPE = "car_drive_type";
+
+        public static final String COLUMN_TRANSMISSION = "car_transmission";
+
+//        Engine
+        public static final String COLUMN_ENGINE_SIZE = "car_engine_size";
+
+        public static final String COLUMN_ENGINE_CYLINDERS = "car_engine_cylinders";
+
+        public static final String COLUMN_HORSEPOWER = "car_horsepower";
+
+        public static final String COLUMN_VALVES = "car_valves";
+
+        public static final String COLUMN_TORQUE = "car_torque";
+
+//        URI
+        public static Uri buildCarUri(long id) {
+            return ContentUris.withAppendedId(CONTENT_URI, id);
+        }
     }
 }
