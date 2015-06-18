@@ -4,18 +4,18 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.devkadair.vrum.data.VehicleInfoContract.CarEntry;
+import com.devkadair.vrum.data.CarInfoContract.CarEntry;
 
 /**
  * Created by keith on 6/15/15.
  */
-public class VehicleDbHelper extends SQLiteOpenHelper {
+public class CarDbHelper extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
 
     static final String DATABASE_NAME = "car.db";
 
-    public VehicleDbHelper(Context context) {
+    public CarDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
@@ -43,6 +43,7 @@ public class VehicleDbHelper extends SQLiteOpenHelper {
                 CarEntry.COLUMN_RANGE_HIGHWAY + " TEXT NOT NULL " +
                 CarEntry.COLUMN_TRANSMISSION + " TEXT NOT NULL " +
                 CarEntry.COLUMN_VALVES + " TEXT NOT NULL " +
+                CarEntry.COLUMN_CAR_ID + " REAL NOT NULL " +
                 CarEntry.COLUMN_WEIGHT + " TEXT NOT NULL " +
                 CarEntry.COLUMN_WIDTH + " TEXT NOT NULL " +
                 CarEntry.COLUMN_WHEEL_BASE + " TEXT NOT NULL " +

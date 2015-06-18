@@ -8,7 +8,7 @@ import android.provider.BaseColumns;
 /**
  * Created by Kadair on 6/7/15.
  */
-public class VehicleInfoContract {
+public class CarInfoContract {
 
     public static final String CONTENT_AUTHORITY = "com.devkadair.vrum";
 
@@ -40,6 +40,8 @@ public class VehicleInfoContract {
         public static final String COLUMN_YEAR = "car_year";
 
         public static final String COLUMN_NUMBER_DOORS = "car_doors";
+
+        public static final String COLUMN_CAR_ID =  "car_id";
 
 //        Car Measurements
         public static final String COLUMN_LENGTH = "car_length";
